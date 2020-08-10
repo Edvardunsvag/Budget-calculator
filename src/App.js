@@ -108,11 +108,9 @@ function App() {
                     typeof: '-',
                 };
 
-                {
-                    type === '-'
-                        ? setExpenses([...expenses, newExpense])
-                        : setIncome([...income, newExpense]);
-                }
+                type === '-'
+                    ? setExpenses([...expenses, newExpense])
+                    : setIncome([...income, newExpense]);
             }
 
             setCharge('');
