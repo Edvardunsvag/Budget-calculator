@@ -105,12 +105,18 @@ function App() {
                     id: uuid(),
                     charge: charge,
                     amount: amount,
-                    typeof: '-',
+                    minusOrPluss: '-',
+                };
+                const newIncome = {
+                    id: uuid(),
+                    charge: charge,
+                    amount: amount,
+                    minusOrPluss: '+',
                 };
 
                 type === '-'
                     ? setExpenses([...expenses, newExpense])
-                    : setIncome([...income, newExpense]);
+                    : setIncome([...income, newIncome]);
             }
 
             setCharge('');
@@ -126,6 +132,7 @@ function App() {
     };
 
     const handleDelete = (id, minusOrPluss) => {
+        console.log(id, minusOrPluss);
         let tempItems = [];
 
         if (minusOrPluss === '-') {

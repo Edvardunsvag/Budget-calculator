@@ -38,18 +38,15 @@ export default function ExpenseList({
                 </ul>
             </div>
             <div className='btn-group'>
-                {expenses.length > 0 && (
-                    <button className='btn' onClick={() => handleClear()}>
-                        Clear Expenses
-                        <MdDelete className='btn-icon'></MdDelete>
-                    </button>
-                )}
-                {expenses.length > 0 && (
-                    <button className='btn' onClick={() => handleClearIncome()}>
-                        Clear Income
-                        <MdDelete className='btn-icon'></MdDelete>
-                    </button>
-                )}
+                <button className='btn' onClick={() => handleClear()}>
+                    Clear Expenses
+                    <MdDelete className='btn-icon'></MdDelete>
+                </button>
+
+                <button className='btn' onClick={() => handleClearIncome()}>
+                    Clear Income
+                    <MdDelete className='btn-icon'></MdDelete>
+                </button>
             </div>
         </>
     );
