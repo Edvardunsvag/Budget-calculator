@@ -6,22 +6,10 @@ import { v4 as uuid } from 'uuid';
 
 import './App.css';
 
-const initialItems = [
-    { id: uuid(), charge: 'rent', amount: 1600, minusOrPluss: '-' },
-    { id: uuid(), charge: 'car', amount: 700, minusOrPluss: '-' },
-    { id: uuid(), charge: 'books', amount: 300, minusOrPluss: '-' },
-];
-
-const initialItemsIncome = [
-    { id: uuid(), charge: 'work', amount: 1000, minusOrPluss: '+' },
-    { id: uuid(), charge: 'sold car', amount: 400, minusOrPluss: '+' },
-    { id: uuid(), charge: 'sold my life', amount: 530, minusOrPluss: '+' },
-];
-
 function App() {
-    const [expenses, setExpenses] = useState(initialItems);
+    const [expenses, setExpenses] = useState([]);
 
-    const [income, setIncome] = useState(initialItemsIncome);
+    const [income, setIncome] = useState([]);
 
     const [charge, setCharge] = useState('');
 

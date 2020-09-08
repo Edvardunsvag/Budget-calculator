@@ -47,7 +47,7 @@ export default function ExpenseForm({
                             <GrAdd className='btn-icon'></GrAdd>
                         </button>
                     ) : (
-                        <button type='submit' className='btn'>
+                        <button type='submit' className='btn btn-submit'>
                             Submit
                             <GrAdd className='btn-icon'></GrAdd>
                         </button>

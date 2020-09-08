@@ -15,17 +15,6 @@ export default function ExpenseList({
         <>
             <div className='list-container'>
                 <ul className='list'>
-                    {expenses.map((expense) => {
-                        return (
-                            <Item
-                                handleEdit={handleEdit}
-                                key={expense.id}
-                                handleDelete={handleDelete}
-                                type={expense}></Item>
-                        );
-                    })}
-                </ul>
-                <ul className='list'>
                     {income.map((income) => {
                         return (
                             <Item
@@ -36,15 +25,29 @@ export default function ExpenseList({
                         );
                     })}
                 </ul>
+                <ul className='list'>
+                    {expenses.map((expense) => {
+                        return (
+                            <Item
+                                handleEdit={handleEdit}
+                                key={expense.id}
+                                handleDelete={handleDelete}
+                                type={expense}></Item>
+                        );
+                    })}
+                </ul>
             </div>
             <div className='btn-group'>
-                <button className='btn' onClick={() => handleClear()}>
-                    Clear Expenses
+                <button
+                    className='btn btn-income'
+                    onClick={() => handleClearIncome()}>
+                    Clear Income
                     <MdDelete className='btn-icon'></MdDelete>
                 </button>
-
-                <button className='btn' onClick={() => handleClearIncome()}>
-                    Clear Income
+                <button
+                    className='btn btn-expense'
+                    onClick={() => handleClear()}>
+                    Clear Expenses
                     <MdDelete className='btn-icon'></MdDelete>
                 </button>
             </div>
